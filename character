@@ -1,0 +1,24 @@
+package game_character;
+import java.util.ArrayList;
+import java.util.List;
+class CharacterRoster {
+    private final List<GameCharacter> characters = new ArrayList<>();
+
+    public CharacterRoster() {
+        characters.add(new Warrior("Brader"));
+        characters.add(new Mage("Eudora"));
+        characters.add(new Archer("Robin"));
+        characters.add(new Assasssin("Helcute"));
+    }
+
+    public GameCharacter getCharacter(int index) {
+        if (index < 0 || index >= characters.size()) {
+            return null;
+        }
+        return characters.get(index);
+    }
+
+    public int size() {
+        return characters.size();
+    }
+}
